@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MongoDB Status Viewer';
+
+  onClick(item) {
+    console.log("I was clicked " + item)
+  }
+
 }
