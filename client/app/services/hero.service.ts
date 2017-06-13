@@ -5,25 +5,29 @@
 import {Injectable} from '@angular/core';
 
 import { Headers, Http, Response } from '@angular/http';
+import { Observable, Subject } from 'rxjs/Rx';
 import 'rxjs/add/operator/toPromise';
 import {Hero} from "../models/hero";
 
 @Injectable()
-export class HeroService {
+export class TableService {
 
-    private heroesUrl = 'api/heroes';  // URL to web api
+    private tablesUrl = 'api/heroes';  // URL to web api
 
     constructor(private http: Http) { }
 
-    getHeroes(): Promise<Hero[]> {
-        return this.http.get(this.heroesUrl)
+    getTables(): Promise<Hero[]> {
+        return this.http.get(this.tablesUrl)
             .toPromise()
-            .then(response => response.json())
+            .then(response => {
+                console.log("eee", response);
+                response.json();
+            })
             .catch(this.handleError);
     }
 
-    getHero(id: string) {
-        return this.http.get(this.heroesUrl + '/' + id)
+    getTable(id: string) {
+        return this.http.get(this.tablesUrl + '/' + id)
             .toPromise()
             .then(response => response.json())
             .catch(this.handleError);
@@ -41,7 +45,7 @@ export class HeroService {
             'Content-Type': 'application/json'});
 
         return this.http
-            .post(this.heroesUrl, JSON.stringify(hero), {headers:headers})
+            .post(this.tablesUrl, JSON.stringify(hero), {headers:headers})
             .toPromise()
             .then(response => response.json().data)
             .catch(this.handleError);
@@ -51,7 +55,7 @@ export class HeroService {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        let url = `${this.heroesUrl}/${hero._id}`;
+        let url = `${this.tablesUrl}/${hero._id}`;
 
         return this.http
             .put(url, JSON.stringify(hero), {headers: headers})
@@ -64,7 +68,7 @@ export class HeroService {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        let url = `${this.heroesUrl}/${hero._id}`;
+        let url = `${this.tablesUrl}/${hero._id}`;
 
         return this.http
             .delete(url, headers)

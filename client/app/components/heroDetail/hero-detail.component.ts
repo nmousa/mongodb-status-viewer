@@ -5,7 +5,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Hero} from "../../models/hero";
 import { ActivatedRoute, Params } from '@angular/router';
-import {HeroService} from "../../services/hero.service";
+import {TableService} from "../../services/hero.service";
 
 @Component({
     selector: 'my-hero-detail',
@@ -20,7 +20,7 @@ export class HeroDetailComponent implements OnInit {
 
 
     constructor(
-        private heroService: HeroService,
+        private heroService: TableService,
         private route: ActivatedRoute) {
     }
 
@@ -32,7 +32,7 @@ export class HeroDetailComponent implements OnInit {
                 this.hero = new Hero();
             } else {
                 this.newHero = false;
-                this.heroService.getHero(id)
+                this.heroService.getTable(id)
                     .then(hero => this.hero = hero);
             }
         });

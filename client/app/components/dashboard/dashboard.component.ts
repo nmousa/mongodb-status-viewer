@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
 import {Hero} from "../../models/hero";
-import {HeroService} from "../../services/hero.service";
+import {TableService} from "../../services/hero.service";
 
 @Component({
     selector: 'my-dashboard',
@@ -15,16 +15,16 @@ import {HeroService} from "../../services/hero.service";
 })
 
 export class DashboardComponent implements OnInit {
-    heroes: Hero[] = [];
+    tables: Hero[] = [];
 
     constructor(
         private router: Router,
-        private heroService: HeroService) {
+        private tableService: TableService) {
     }
 
     ngOnInit() {
-        this.heroService.getHeroes()
-            .then(heroes => this.heroes = heroes);
+        this.tableService.getTables()
+            .then(tables => this.tables = tables);
     }
 
     gotoDetail(hero: Hero) {
