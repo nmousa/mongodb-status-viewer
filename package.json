@@ -1,48 +1,66 @@
 {
-  "name": "mongodb-status-viewer",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "angular2-express-mongo",
+  "version": "1.0.0",
+  "description": "Angular2, Mongo, Gulp, Typescript and Express",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "clean": "gulp clean",
+    "compile": "gulp compile",
+    "build": "gulp build",
+    "deploy": "concurrently --kill-others \"gulp watch\" \"node ./dist/server/bin/www\"",
+    "postinstall": "gulp installTypings"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moizKachwala/Angular2-expressjs-mongoose-gulp-node-typescript.git"
+  },
+  "keywords": [
+    "Angular2",
+    "Express",
+    "Quick Start",
+    "Gulp",
+    "Typescript"
+  ],
+  "author": "Moiz Kachwala",
+  "license": "MIT",
   "dependencies": {
-    "@angular/animations": "^4.1.3",
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
-    "@angular/http": "^4.0.0",
-    "@angular/material": "^2.0.0-beta.6",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/router": "^4.0.0",
+	  "@angular/common": "~4.2.2",
+    "@angular/compiler": "~4.2.2",
+    "@angular/core": "~4.2.2",
+    "@angular/forms": "~4.2.2",
+    "@angular/http": "~4.2.2",
+    "@angular/platform-browser": "~4.2.2",
+    "@angular/platform-browser-dynamic": "~4.2.2",
+    "@angular/router": "~4.2.2",
+    "@angular/upgrade": "~4.2.2",
+
+    "body-parser": "1.17.2",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "express": "^4.15.2",
+    "mongoose": "^4.8.6",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "5.4.0",
+    "systemjs": "0.20.13",
+    "zone.js": "^0.8.12"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0",
-    "@angular/compiler-cli": "^4.0.0",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "~6.0.60",
-    "codelyzer": "~2.0.0",
-    "jasmine-core": "~2.5.2",
-    "jasmine-spec-reporter": "~3.2.0",
-    "karma": "~1.4.1",
-    "karma-chrome-launcher": "~2.0.0",
-    "karma-cli": "~1.0.1",
-    "karma-jasmine": "~1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
-    "protractor": "~5.1.0",
-    "ts-node": "~2.0.0",
-    "tslint": "~4.5.0",
-    "typescript": "~2.2.0"
-  }
-}
+    "concurrently": "^3.4.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-tslint": "^8.1.1",
+    "gulp-typescript": "^3.0.1",
+    "gulp-typings": "^2.0.4",
+    "method-override": "^2.3.6",
+    "run-sequence": "^1.2.2",
+    "ts-node": "3.0.6",
+    "tslint": "^5.4.3",
+    "typescript": "^2.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/moizKachwala/Angular2-expressjs-mongoose-gulp-node-typescript/issues"
+  },
+  "homepage": "https://github.com/moizKachwala/Angular2-expressjs-mongoose-gulp-node-typescript#readme"
+} 
