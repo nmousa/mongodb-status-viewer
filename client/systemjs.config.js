@@ -5,7 +5,8 @@ var isPublic = typeof window != "undefined";
   var map = {
     'app':                        'app', // 'dist',
     '@angular':                   (isPublic)? '@angular' : 'node_modules/@angular',
-    'rxjs':                       (isPublic)? 'rxjs' : 'node_modules/rxjs'
+    'rxjs':                       (isPublic)? 'rxjs' : 'node_modules/rxjs',
+    'lodash':                     (isPublic)? 'lodash' : 'node_modules/lodash'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {

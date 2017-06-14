@@ -2,11 +2,11 @@
  * Created by Moiz.Kachwala on 02-06-2016.
  */
 
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {Hero} from "../../models/hero";
-import {TableService} from "../../services/hero.service";
+import { Hero } from "../../models/hero";
+import { TableService } from "../../services/hero.service";
 
 @Component({
     selector: 'my-dashboard',
@@ -24,7 +24,11 @@ export class DashboardComponent implements OnInit {
 
     ngOnInit() {
         this.tableService.getTables()
-            .then(tables => this.tables = tables);
+            .subscribe(t => {
+                console.log("setting", t);
+                this.tables = t;
+            }
+            );
     }
 
     gotoDetail(hero: Hero) {

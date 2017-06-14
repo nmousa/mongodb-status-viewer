@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector:'my-app',
+    selector: 'my-app',
     templateUrl: './app/app.html'
 })
 

@@ -27,25 +27,10 @@ export class HeroDetailComponent implements OnInit {
     ngOnInit() {
         this.route.params.forEach((params: Params) => {
             let id = params['id'];
-            if (id === 'new') {
-                this.newHero = true;
-                this.hero = new Hero();
-            } else {
-                this.newHero = false;
-                this.heroService.getTable(id)
-                    .then(hero => this.hero = hero);
-            }
         });
     }
 
     save() {
-        this.heroService
-            .save(this.hero)
-            .then(hero => {
-                this.hero = hero; // saved hero, w/ id if new
-                this.goBack();
-            })
-            .catch(error => this.error = error); // TODO: Display error message
     }
 
     goBack() {
