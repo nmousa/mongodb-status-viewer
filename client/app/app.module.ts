@@ -17,6 +17,7 @@ import { MaterialModule } from '@angular/material';
   imports: [
     BrowserModule,
     HttpModule,
+    MaterialModule,
     FormsModule,
     routing
   ],
