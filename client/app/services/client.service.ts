@@ -1,7 +1,7 @@
 import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Rx';
-//import * as _ from 'lodash';
+//import { cloneDeep } from 'lodash';
 
 /**
  * Base web service client class
@@ -43,6 +43,7 @@ export class WSClient {
     }
 
     private makeSafeFromMutation<T>(obs: Observable<T>): Observable<T> {
-        return obs.map(e => e); //_.deepClone here TODO
+        return obs.map(e => e);
+        // return obs.map(e => _.cloneDeep(e));
     }
 }

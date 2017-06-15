@@ -34,6 +34,7 @@
     "@angular/platform-browser-dynamic": "~4.2.2",
     "@angular/router": "~4.2.2",
     "@angular/upgrade": "~4.2.2",
+    "@types/lodash": "^4.14.66",
     "body-parser": "1.17.2",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
@@ -41,8 +42,8 @@
     "lodash": "^4.17.4",
     "mongoose": "^4.8.6",
     "reflect-metadata": "^0.1.10",
-    "rxjs": "5.4.0",
-    "systemjs": "0.20.13",
+    "rxjs": "6.0.0-alpha.0",
+    "systemjs": "0.20.14",
     "zone.js": "^0.8.12"
   },
   "devDependencies": {
@@ -59,6 +60,6 @@
     "run-sequence": "^1.2.2",
     "ts-node": "3.0.6",
     "tslint": "^5.4.3",
-    "typescript": "^2.2.1"
+    "typescript": "^2.4.0"
   }
 }
