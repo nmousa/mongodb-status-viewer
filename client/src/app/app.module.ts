@@ -3,14 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { Http } from '@angular/http';
+
+// Import HttpClientModule from @angular/common/http
+import {HttpClientModule} from '@angular/common/http';
+import { TestComponent } from './test/test.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule,
+   // Http,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,4 +4,12 @@
   </h1>
 </md-card>
 
+<button md-button [mdMenuTriggerFor]="menu">Menu</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item (click)="fun()">Collections</button>
+  <button md-menu-item>Stats</button>
+</md-menu>
+
+<md-card>{{collections}}</md-card>
+
 
