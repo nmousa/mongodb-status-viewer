@@ -8,14 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Import HttpClientModule from @angular/common/http
 import {HttpClientModule} from '@angular/common/http';
-import { TestComponent } from './test/test.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TestComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
