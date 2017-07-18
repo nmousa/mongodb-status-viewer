@@ -5,20 +5,19 @@ import { Observable, Subject } from 'rxjs/Rx';
 import * as _ from 'lodash';
 
 @Injectable()
-export class webServiceClient {
+export class WebServiceClient {
     private errorsSubject = new Subject<any>();
-    public baseURL: string = "./assets"
+    public baseURL: string = "../assets"
 
     constructor(private http: Http) {
     }
 
     public getResource(resource: string): Observable<any> {
         const response = this.http.get(`${this.baseURL}/${resource}`);
-        return response;
-        //return this.processResponse(response); TODO uncomment this when we're getting resources from the server
+        return this.getResponseBody(response);
     }
 
-    private processResponse(obs: Observable<Response>): Observable<any> {
+    private getResponseBody(obs: Observable<Response>): Observable<any> {
         let self = this;
         let response = obs
             .catch(error => {
@@ -33,11 +32,6 @@ export class webServiceClient {
             .catch(this.parseError);
 
         return this.actLikeSafePromise(response);
-    }
-    actLikePromise<T>(obs: Observable<T>): Observable<T> {
-        let hot = obs.publishReplay(1);
-        hot.connect();
-        return hot;
     }
 
     actLikeSafePromise<T>(obs: Observable<T>): Observable<T> {

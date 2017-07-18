@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-//import { Http } from '@angular/http';
-import {HttpClient}  from '@angular/common/http';
+import { WebServiceClient } from './services/webServerClient';
 
 
 @Component({
@@ -12,14 +11,14 @@ export class AppComponent {
   title = 'mongodb-data-viewer';
   collections;
 
-  constructor(private http: HttpClient){
+  constructor(private ws: WebServiceClient) {
 
   }
 
-  fun(){
-    this.http.get('../assets/collections.json')
-    .subscribe(data => {
-      this.collections = JSON.stringify(data);
-    });
+  fun() {
+    this.ws.getResource('collections.json')
+      .subscribe(data => {
+        this.collections = JSON.stringify(data);
+      });
   }
 }
