@@ -1,0 +1,28 @@
+{
+    "system" : {
+        "currentTime" : ISODate("2017-07-18T22:10:49.710Z"),
+        "hostname" : "some-host-name",
+        "cpuAddrSize" : 64,
+        "memSizeMB" : 8017,
+        "numCores" : 4,
+        "cpuArch" : "x86_64",
+        "numaEnabled" : false
+    },
+    "os" : {
+        "type" : "Linux",
+        "name" : "Ubuntu",
+        "version" : "14.04"
+    },
+    "extra" : {
+        "versionString" : "Linux version 3.13.0-119-generic (buildd@lcy01-08) (gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ) #166-Ubuntu SMP Wed May 3 12:18:55 UTC 2017",
+        "libcVersion" : "2.19",
+        "versionSignature" : "Ubuntu 3.13.0-119.166-generic 3.13.11-ckt39",
+        "kernelVersion" : "3.13.0-119-generic",
+        "cpuFrequencyMHz" : "3100.064",
+        "cpuFeatures" : "fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 bmi2 erms",
+        "pageSize" : NumberLong(4096),
+        "numPages" : 2052394,
+        "maxOpenFiles" : 64000
+    },
+    "ok" : 1
+}

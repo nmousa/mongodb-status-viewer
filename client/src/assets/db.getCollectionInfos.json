@@ -1,0 +1,25 @@
+[
+    {
+        "name" : "data1",
+        "options" : {}
+    },
+    {
+        "name" : "my_collection",
+        "options" : {}
+    },
+    {
+        "name" : "collection2",
+        "options" : {}
+    },
+    {
+        "name" : "system.profile",
+        "options" : {
+            "capped" : true,
+            "size" : 1048576
+        }
+    },
+    {
+        "name" : "client_collection",
+        "options" : {}
+    }
+]

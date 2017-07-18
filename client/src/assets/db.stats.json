@@ -1,0 +1,12 @@
+{
+    "db" : "dbName",
+    "collections" : 5,
+    "objects" : 349404,
+    "avgObjSize" : 4078.71479719751,
+    "dataSize" : 1425119265,
+    "storageSize" : 346882048,
+    "numExtents" : 0,
+    "indexes" : 9,
+    "indexSize" : 7974912,
+    "ok" : 1
+}
