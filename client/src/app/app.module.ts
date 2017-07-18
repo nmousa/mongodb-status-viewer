@@ -6,10 +6,12 @@ import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WebServiceClient } from './services/webServerClient';
 import { HttpModule } from '@angular/http';
+import { DatabaseComponent } from './components/database/database.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DatabaseComponent
   ],
   imports: [
     BrowserModule,
