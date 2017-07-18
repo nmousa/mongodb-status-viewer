@@ -1,15 +1,15 @@
-<md-card>
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-</md-card>
+<md-toolbar>
+  <span>MongoDB Data Viewer</span>
+  <button md-button [mdMenuTriggerFor]="dbMenu">Databases</button>
+  <md-menu #dbMenu="mdMenu">
+    <button md-menu-item>Databases</button>
+    <button md-menu-item>Statistics</button>
+  </md-menu>
 
-<button md-button [mdMenuTriggerFor]="menu">Menu</button>
-<md-menu #menu="mdMenu">
-  <button md-menu-item (click)="fun()">Collections</button>
-  <button md-menu-item>Stats</button>
-</md-menu>
-
+  <button md-button [mdMenuTriggerFor]="colMenu">Collections</button>
+  <md-menu #colMenu="mdMenu">
+    <button md-menu-item>Collections</button>
+    <button md-menu-item>Statistics</button>
+  </md-menu>
+</md-toolbar>
 <md-card>{{collections}}</md-card>
-
-
