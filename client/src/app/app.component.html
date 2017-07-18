@@ -2,14 +2,14 @@
   <span>MongoDB Data Viewer</span>
   <button md-button [mdMenuTriggerFor]="dbMenu">Databases</button>
   <md-menu #dbMenu="mdMenu">
-    <button md-menu-item>Databases</button>
-    <button md-menu-item>Statistics</button>
+    <button md-menu-item routerLink="database">Databases</button>
+    <button md-menu-item routerLink="database">Statistics</button>
   </md-menu>
 
   <button md-button [mdMenuTriggerFor]="colMenu">Collections</button>
   <md-menu #colMenu="mdMenu">
-    <button md-menu-item>Collections</button>
-    <button md-menu-item>Statistics</button>
+    <button md-menu-item routerLink="collection">Collections</button>
+    <button md-menu-item routerLink="collection">Statistics</button>
   </md-menu>
 </md-toolbar>
 <md-card>{{collections}}</md-card>
