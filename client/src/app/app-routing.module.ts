@@ -6,10 +6,10 @@ import { DatabaseComponent } from './components/database/database.component';
 
 const routes: Routes =
     [
-        { path: 'databases', component: DatabaseComponent },
+        { path: 'database', component: DatabaseComponent },
         { path: 'collection', component: CollectionComponent },
-        { path: '', pathMatch: 'full', redirectTo: 'databases' },
-        { path: '**', pathMatch: 'full', redirectTo: 'databases' }
+        { path: '', pathMatch: 'full', redirectTo: 'database' },
+        { path: '**', pathMatch: 'full', redirectTo: 'database' }
     ];
 
 
