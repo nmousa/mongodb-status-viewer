@@ -8,12 +8,14 @@ import { WebServiceClient } from './services/webServerClient';
 import { HttpModule } from '@angular/http';
 import { DatabaseComponent } from './components/database/database.component';
 import { CollectionComponent } from './components/collection/collection.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatabaseComponent,
-    CollectionComponent
+    CollectionComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
