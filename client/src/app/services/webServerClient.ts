@@ -1,19 +1,21 @@
 import { Injectable, Inject } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import 'rxjs/Rx';
 import { Observable, Subject } from 'rxjs/Rx';
 import * as _ from 'lodash';
+//npm install --save lodash
 
 @Injectable()
 export class WebServiceClient {
     private errorsSubject = new Subject<any>();
-    public baseURL: string = "../assets"
+    public baseURL: string = "../assets/mock-endpoints/"
 
     constructor(private http: Http) {
     }
 
     public getResource(resource: string): Observable<any> {
-        const response = this.http.get(`${this.baseURL}/${resource}`);
+        let fullPath = this.baseURL + resource;
+        console.log("GET request to full path: " + fullPath);
+        const response = this.http.get(fullPath);
         return this.getResponseBody(response);
     }
 
