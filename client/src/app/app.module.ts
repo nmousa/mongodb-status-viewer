@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 import { DatabaseComponent } from './components/database/database.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { AboutComponent } from './components/about/about.component';
+import { ImportantConfig } from '../assets/config';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AboutComponent } from './components/about/about.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [WebServiceClient],
+  providers: [WebServiceClient, ImportantConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

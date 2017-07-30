@@ -3,16 +3,17 @@ import { Http, Response } from '@angular/http';
 import { Observable, Subject } from 'rxjs/Rx';
 import * as _ from 'lodash';
 //npm install --save lodash
+import { ImportantConfig } from '../../assets/config';
 
 @Injectable()
 export class WebServiceClient {
     private errorsSubject = new Subject<any>();
     public baseURL: string = "../assets/mock-endpoints/"
 
-    constructor(private http: Http) {
-    }
+    constructor(private http: Http, private config: ImportantConfig) {}
 
     public getResource(resource: string): Observable<any> {
+        console.log("Important API KEY is: " + this.config.API_KEY);
         let fullPath = this.baseURL + resource;
         console.log("GET request to full path: " + fullPath);
         const response = this.http.get(fullPath);
