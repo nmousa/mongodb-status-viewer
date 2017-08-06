@@ -8,7 +8,7 @@ import { ImportantConfig } from '../../assets/config';
 @Injectable()
 export class WebServiceClient {
     private errorsSubject = new Subject<any>();
-    public baseURL: string = "../assets/mock-endpoints/"
+    public baseURL: string = "/api/"
 
     constructor(private http: Http, private config: ImportantConfig) {}
 

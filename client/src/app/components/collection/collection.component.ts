@@ -8,14 +8,14 @@ import { WebServiceClient } from '../../services/webServerClient';
 })
 export class CollectionComponent implements OnInit {
 
-  collections: any = [];
+  booksCollection: any = [];
 
   constructor(private ws: WebServiceClient) { }
 
   ngOnInit() {
-    this.ws.getResource("collections.json").subscribe(data => {
-      this.collections = data.collections;
-      console.log("data", data, "collections", this.collections)
+    this.ws.getResource("find").subscribe(data => {
+      this.booksCollection = data;
+      console.log("data", data, "booksCollection", this.booksCollection);
     });
   }
 
