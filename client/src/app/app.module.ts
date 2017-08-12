@@ -11,20 +11,20 @@ import { CollectionComponent } from './components/collection/collection.componen
 import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ // things that you write -- all components
     AppComponent,
     DatabaseComponent,
     CollectionComponent,
     AboutComponent
   ],
-  imports: [
+  imports: [ // major module that make the app work
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [WebServiceClient],
+  providers: [WebServiceClient], //services go here 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
