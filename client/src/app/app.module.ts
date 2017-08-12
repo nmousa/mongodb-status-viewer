@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 import { DatabaseComponent } from './components/database/database.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { AboutComponent } from './components/about/about.component';
+import { ImportantConfig } from '../assets/config';
 
 @NgModule({
   declarations: [ // things that you write -- all components
@@ -24,7 +25,7 @@ import { AboutComponent } from './components/about/about.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [WebServiceClient], //services go here 
+  providers: [WebServiceClient, ImportantConfig], //services go here 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

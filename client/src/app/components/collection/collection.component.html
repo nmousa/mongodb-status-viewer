@@ -1,3 +1,13 @@
-<p>
-  collection works!
-</p>
+<md-card>Books Collection</md-card>
+
+<div *ngFor="let c of booksCollection; let i=index">
+  Book # {{i}} => {{c.title}}
+</div>
+
+<md-chip-list>
+  <md-chip  *ngFor="let c of booksCollection; let i=index" color="primary" selected="true">{{c.title}}</md-chip>
+</md-chip-list>
+
+<md-chip-list>
+  <md-chip  *ngFor="let c of booksCollection; let i=index" color="accent" selected="true">{{c.title}}</md-chip>
+</md-chip-list>
