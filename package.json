@@ -5,12 +5,12 @@
   "scripts": {
     "ng": "ng",
     "start": "node ./bin/www",
-    "build": "ng build",
+    "build": "ng build", 
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build -prod --aot=false",
-    "deploy": "git push && git push heroku master"
+    "deploy-heroku": "git push heroku master"
   },
   "private": true,
   "dependencies": {
